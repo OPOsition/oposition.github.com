@@ -2,7 +2,6 @@
   import Smoke from './Smoke.svelte';
 
   let input;
-  console.log('app ok');
 </script>
 
 {#if input === 'smoke2020'}
