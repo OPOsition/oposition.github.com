@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap');
+
+body {
+  --bg-color: #1d1d1d;
+  --text-color: #f0f0f0;
+  background-color: var(--bg-color);
+}
+
+*,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+span,
+label {
+  margin: 0;
+  font-family: 'Quicksand', Arial, Helvetica, sans-serif;
+  color: var(--text-color);
+}
