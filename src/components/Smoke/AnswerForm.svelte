@@ -1,6 +1,7 @@
 <script>
+  import { firebaseHelper, smoke2020Key } from '../../firebase/helper';
+
   export let todayId;
-  import { firebaseHelper, smoke2020Key } from '../firebase/helper';
 
   const { editValue } = firebaseHelper(`/${smoke2020Key}/${todayId}`);
   const onAnswer = (answer) => () => {
@@ -45,11 +46,11 @@
 
   .no,
   .no:active {
-    background-color: #c0392b;
+    background-color: #27ae60;
   }
 
   .yes,
   .yes:active {
-    background-color: #27ae60;
+    background-color: #c0392b;
   }
 </style>

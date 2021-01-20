@@ -3,9 +3,10 @@
   import appStates from './utils/appStates';
   import { formatDate } from './utils/formatDate';
   import './index.css';
-  import Waiting from './components/Waiting.svelte';
-  import AnswerForm from './components/AnswerForm.svelte';
-  import ShowData from './components/ShowData.svelte';
+  import Waiting from './components/Smoke/Waiting.svelte';
+  import AnswerForm from './components/Smoke/AnswerForm.svelte';
+  import ShowData from './components/Smoke/ShowData.svelte';
+  import EditLastData from './components/Smoke/EditLastData.svelte';
 
   let smokeData;
   let state = appStates.WAITING;
@@ -28,6 +29,7 @@
   {#if state === appStates.WAITING}
     <Waiting />
   {:else if state === appStates.ANSWERED}
+    <EditLastData {todayId} />
     <ShowData data={smokeData} />
   {:else if state === appStates.NEED_ANSWER}
     <AnswerForm {todayId} />
